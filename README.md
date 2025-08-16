@@ -1,59 +1,74 @@
-# WebSiteOne
+# Web Site One — Personal Website
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.1.
+A modern, fast personal website built with Angular 20 and Tailwind CSS. It includes sections like Hero, Skills, About, and Contact, with smooth scrolling and a responsive layout. A static `template.html` is also provided as a design reference.
 
-## Development server
+## Quick start
 
-To start a local development server, run:
+Prerequisites:
+- Node.js 18+ (recommended: 20+)
+- npm 9+
 
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Install dependencies and start the dev server:
 
 ```bash
-ng generate component component-name
+npm install
+npm start
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Then open http://localhost:4200/. The app reloads on file changes.
+
+## Scripts
+
+- `npm start` — Run the local development server (Angular CLI `ng serve`).
+- `npm run build` — Production build to `dist/`.
+- `npm run watch` — Development build with watch mode.
+- `npm test` — Run unit tests with Karma/Jasmine.
+
+## Tech stack
+
+- Angular 20
+- Tailwind CSS 3 (configured via `tailwind.config.js`, `postcss.config.js`)
+- TypeScript 5
+- Inter font (via CDN in `template.html`); optional iconography via Lucide and charts via Chart.js are shown in `template.html` only
+
+## Project structure
+
+- `src/` — Angular application source
+  - `app/` — Components and app logic
+  - `index.html` — App entry
+  - `styles.css` — Global styles (Tailwind included)
+- `public/` — Static assets (e.g., `favicon.ico`)
+- `template.html` — Standalone static HTML design reference not used by Angular build
+
+## Styling
+
+Tailwind is enabled and processed via PostCSS. You can customize design tokens in `tailwind.config.js` and add global utilities to `src/styles.css`.
+
+## Build & deploy
+
+Create an optimized production build:
 
 ```bash
-ng generate --help
+npm run build
 ```
 
-## Building
+Artifacts are emitted to `dist/`. You can deploy the contents of the built app to any static hosting (e.g., Netlify, Vercel, GitHub Pages, or an S3 bucket). For simple static hosting, serve the `dist/<project-name>` folder.
 
-To build the project run:
+## Generating components
+
+You can scaffold components with Angular CLI:
 
 ```bash
-ng build
+npx ng generate component my-component
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+See all schematics with `npx ng g --help`.
 
-## Running unit tests
+## Notes
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- If you copy code from `template.html`, move scripts/styles to Angular-friendly locations (e.g., install packages or add to `angular.json` as needed).
+- Update the site content (name, hero text, sections) inside components under `src/app/`.
 
-```bash
-ng test
-```
+## License
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This repository currently has no explicit license. Add one if you plan to open-source or distribute it.
