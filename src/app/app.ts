@@ -9,7 +9,7 @@ import {AfterViewInit, Component, ElementRef} from '@angular/core';
 export class App implements AfterViewInit {
   currentYear = new Date().getFullYear();
 
-  recipientEmail = 'filippocazzarolli@gmail.com';
+  recipientEmail = 'filippo.developer@gmail.com';
 
   constructor(private host: ElementRef<HTMLElement>) {
   }
