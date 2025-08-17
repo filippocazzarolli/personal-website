@@ -9,7 +9,41 @@ import {AfterViewInit, Component, ElementRef} from '@angular/core';
 export class App implements AfterViewInit {
   currentYear = new Date().getFullYear();
 
+  recipientEmail = 'filippocazzarolli@gmail.com';
+
   constructor(private host: ElementRef<HTMLElement>) {
+  }
+
+  openMail(event: Event): void {
+    event.preventDefault();
+
+    const rootEl = this.host.nativeElement;
+    const nameInput = rootEl.querySelector<HTMLInputElement>('#name');
+    const emailInput = rootEl.querySelector<HTMLInputElement>('#email');
+    const messageInput = rootEl.querySelector<HTMLTextAreaElement>('#message');
+
+    const name = (nameInput?.value || '').trim();
+    const email = (emailInput?.value || '').trim();
+    const message = (messageInput?.value || '').trim();
+
+    const subjectBase = 'New message from portfolio site';
+    const subjectDetails = [name, email].filter(Boolean).join(' · ');
+    const subject = subjectDetails ? `${subjectBase} — ${subjectDetails}` : subjectBase;
+
+    const lines = [] as string[];
+    if (name) lines.push(`Name: ${name}`);
+    if (email) lines.push(`Email: ${email}`);
+    if (message) {
+      if (lines.length) lines.push('');
+      lines.push(message);
+    }
+    const body = lines.join('\n');
+
+    const to = this.recipientEmail ? encodeURIComponent(this.recipientEmail) : '';
+    const mailto = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Trigger default mail client
+    window.location.href = mailto;
   }
 
   ngAfterViewInit(): void {
