@@ -1,0 +1,44 @@
+{
+  "NAV": {
+    "SKILLS": "Competenze",
+    "ABOUT": "Chi sono",
+    "CONTACT": "Contatti"
+  },
+  "HERO": {
+    "TITLE": "Sviluppatore Full-Stack che crea soluzioni eleganti e performanti",
+    "SUBTITLE": "Unisco precisione progettuale e robustezza tecnica per creare esperienze digitali fluide e intuitive.",
+    "CTA": "Contattami"
+  },
+  "SECTIONS": {
+    "SKILLS": "Competenze",
+    "ABOUT": "Chi sono",
+    "CONTACT": "Contatti"
+  },
+  "CARDS": {
+    "FRONTEND": "Frontend",
+    "BACKEND": "Backend",
+    "CLOUD": "Cloud"
+  },
+  "ABOUT": {
+    "TEXT": "Grande appassionato di software e del mondo Linux, coltivo da sempre la curiosità e la voglia di sperimentare nuove tecnologie, andando alla ricerca di progetti stimolanti e sfidanti. Con oltre 20 anni di esperienza nel settore, ho sviluppato la capacità di guidare persone e team nella realizzazione di prodotti e servizi di alta qualità, unendo visione strategica e attenzione ai dettagli. Determinazione e tenacia sono tratti distintivi che mi accompagnano nel raggiungimento degli obiettivi, anche nei contesti più complessi.\nGrazie a studi tecnici e competenze nella comunicazione, che continuo ad approfondire ogni giorno, investo costantemente nella mia crescita professionale, per offrire sempre il meglio in ogni progetto a cui partecipo."
+  },
+  "CONTACT": {
+    "NAME": "Nome",
+    "NAME_PLACEHOLDER": "Il tuo nome",
+    "EMAIL": "Email",
+    "EMAIL_PLACEHOLDER": "tu@example.com",
+    "MESSAGE": "Messaggio",
+    "MESSAGE_PLACEHOLDER": "Parlami del tuo progetto",
+    "SEND": "Invia Messaggio",
+    "OR": "Oppure",
+    "OPEN_CLIENT": "apri il tuo client email"
+  },
+  "FOOTER": {
+    "RIGHTS": "Tutti i diritti riservati."
+  },
+  "MAIL": {
+    "SUBJECT_BASE": "Nuovo messaggio dal sito portfolio",
+    "NAME_LABEL": "Nome",
+    "EMAIL_LABEL": "Email"
+  }
+}

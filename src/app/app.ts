@@ -1,8 +1,9 @@
 import {AfterViewInit, Component, ElementRef} from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -11,7 +12,18 @@ export class App implements AfterViewInit {
 
   recipientEmail = 'filippo.developer@gmail.com';
 
-  constructor(private host: ElementRef<HTMLElement>) {
+  constructor(private host: ElementRef<HTMLElement>, private translate: TranslateService) {
+    // Initialize translations
+    const documentLang = document?.documentElement?.lang?.split('-')[0] || '';
+    const browserLang = (navigator?.language || '').split('-')[0];
+    const lang = (documentLang || browserLang || 'en').toLowerCase();
+
+    translate.addLangs(['en', 'it']);
+    translate.setDefaultLang('en');
+    translate.use(lang.match(/en|it/) ? lang : 'en');
+
+    // reflect selected language to the document lang attribute
+    document.documentElement.lang = translate.currentLang;
   }
 
   openMail(event: Event): void {
@@ -26,13 +38,13 @@ export class App implements AfterViewInit {
     const email = (emailInput?.value || '').trim();
     const message = (messageInput?.value || '').trim();
 
-    const subjectBase = 'New message from portfolio site';
+    const subjectBase = this.translate.instant('MAIL.SUBJECT_BASE') || 'New message from portfolio site';
     const subjectDetails = [name, email].filter(Boolean).join(' · ');
     const subject = subjectDetails ? `${subjectBase} — ${subjectDetails}` : subjectBase;
 
     const lines = [] as string[];
-    if (name) lines.push(`Name: ${name}`);
-    if (email) lines.push(`Email: ${email}`);
+    if (name) lines.push(`${this.translate.instant('MAIL.NAME_LABEL') || 'Name'}: ${name}`);
+    if (email) lines.push(`${this.translate.instant('MAIL.EMAIL_LABEL') || 'Email'}: ${email}`);
     if (message) {
       if (lines.length) lines.push('');
       lines.push(message);
@@ -75,7 +87,8 @@ export class App implements AfterViewInit {
     const langButtons = rootEl.querySelectorAll<HTMLButtonElement>('.lang-btn');
     langButtons.forEach(btn => {
       btn.addEventListener('click', () => {
-        const chosen = btn.dataset['lang'] || 'en';
+        const chosen = (btn.dataset['lang'] || 'en').toLowerCase();
+        this.translate.use(chosen);
         document.documentElement.lang = chosen;
         langButtons.forEach(b => b.classList.toggle('font-semibold', b === btn));
       });

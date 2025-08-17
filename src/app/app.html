@@ -5,9 +5,9 @@
 
     <!-- Primary navigation -->
     <nav class="hidden md:flex items-center space-x-8 text-sm">
-      <a href="#skills" class="hover:text-white transition" i18n>Skills</a>
-      <a href="#about" class="hover:text-white transition" i18n>About</a>
-      <a href="#contact" class="hover:text-white transition" i18n>Contact</a>
+      <a href="#skills" class="hover:text-white transition">{{ 'NAV.SKILLS' | translate }}</a>
+      <a href="#about" class="hover:text-white transition">{{ 'NAV.ABOUT' | translate }}</a>
+      <a href="#contact" class="hover:text-white transition">{{ 'NAV.CONTACT' | translate }}</a>
     </nav>
 
     <!-- Language switcher (desktop) -->
@@ -36,14 +36,12 @@
     <h1 class="text-4xl md:text-6xl font-semibold text-white mb-6 opacity-0 translate-y-6">
       Full-Stack Developer crafting <span class="text-neutral-400">elegant &amp; performant</span> solutions
     </h1>
-    <p class="text-neutral-400 mb-10 opacity-0 translate-y-6 delay-100" i18n>
-      I blend thoughtful design with robust engineering to build digital products that feel effortless.
+    <p class="text-neutral-400 mb-10 opacity-0 translate-y-6 delay-100">
+      {{ 'HERO.SUBTITLE' | translate }}
     </p>
     <div class="flex justify-center space-x-4 opacity-0 translate-y-6 delay-200">
       <a href="#contact"
-         class="px-6 py-3 bg-white text-neutral-900 rounded-md text-sm font-medium hover:bg-neutral-200 transition"
-         i18n>Get
-        In Touch</a>
+         class="px-6 py-3 bg-white text-neutral-900 rounded-md text-sm font-medium hover:bg-neutral-200 transition">{{ 'HERO.CTA' | translate }}</a>
     </div>
   </div>
 </section>
@@ -53,13 +51,13 @@
 
 <!-- SKILLS -->
 <section id="skills" class="max-w-7xl mx-auto px-6 lg:px-12 py-24">
-  <h2 class="text-2xl md:text-3xl font-semibold text-white mb-12 opacity-0 translate-y-6" i18n>Skills</h2>
+  <h2 class="text-2xl md:text-3xl font-semibold text-white mb-12 opacity-0 translate-y-6">{{ 'SECTIONS.SKILLS' | translate }}</h2>
   <div class="grid gap-6 md:grid-cols-3">
     <!-- FRONTEND -->
     <div
       class="bg-neutral-900 border border-neutral-800 rounded-xl p-6 opacity-0 translate-y-6 delay-100 hover:border-neutral-700 transition">
       <i data-lucide="code" class="w-5 h-5 text-neutral-400 mb-4"></i>
-      <h3 class="text-lg font-semibold text-white mb-4">Frontend</h3>
+      <h3 class="text-lg font-semibold text-white mb-4">{{ 'CARDS.FRONTEND' | translate }}</h3>
       <ul class="space-y-2 text-sm text-neutral-400 list-disc list-inside">
         <li>HTML5, CSS3, JavaScript (ES6+), TypeScript</li>
         <li>Angular, Ionic, React, NextJS, Flutter</li>
@@ -73,11 +71,11 @@
     <div
       class="bg-neutral-900 border border-neutral-800 rounded-xl p-6 opacity-0 translate-y-6 delay-150 hover:border-neutral-700 transition">
       <i data-lucide="server" class="w-5 h-5 text-neutral-400 mb-4"></i>
-      <h3 class="text-lg font-semibold text-white mb-4">Backend</h3>
+      <h3 class="text-lg font-semibold text-white mb-4">{{ 'CARDS.BACKEND' | translate }}</h3>
       <ul class="space-y-2 text-sm text-neutral-400 list-disc list-inside">
         <li>Python, Java, Node.js</li>
         <li>FastAPI, Spring Boot, Express.js</li>
-        <li>PostgreSQL, MySQL, MongoDB, dynamoDB, Redis</li>
+        <li>PostgreSQL, MySQL, MongoDB, dynamoDB</li>
         <li>LangChain, Haystack (LLM, RAG)</li>
         <li>Auth (OAuth2, JWT, Keycloak), Microservices</li>
       </ul>
@@ -87,7 +85,7 @@
     <div
       class="bg-neutral-900 border border-neutral-800 rounded-xl p-6 opacity-0 translate-y-6 delay-200 hover:border-neutral-700 transition">
       <i data-lucide="cloud" class="w-5 h-5 text-neutral-400 mb-4"></i>
-      <h3 class="text-lg font-semibold text-white mb-4">Cloud</h3>
+      <h3 class="text-lg font-semibold text-white mb-4">{{ 'CARDS.CLOUD' | translate }}</h3>
       <ul class="space-y-2 text-sm text-neutral-400 list-disc list-inside">
         <li>AWS (EC2, S3, Lambda, cdk, Amplify)</li>
         <li>Supabase, CloudFlare, Google Cloud Platform</li>
@@ -119,20 +117,13 @@
 
   <!-- ABOUT -->
   <section id="about" class="max-w-7xl mx-auto px-6 lg:px-12 py-24">
-    <h2 class="text-2xl md:text-3xl font-semibold text-white mb-12 opacity-0 translate-y-6" i18n>About</h2>
+    <h2 class="text-2xl md:text-3xl font-semibold text-white mb-12 opacity-0 translate-y-6">{{ 'SECTIONS.ABOUT' | translate }}</h2>
     <div class="md:flex md:items-center md:space-x-14">
       <img src="/img/photo_profile.jpg" alt="Profile"
            class="w-56 h-56 rounded-full object-cover mb-10 md:mb-0 opacity-0 translate-y-6 delay-100">
       <div class="max-w-2xl opacity-0 translate-y-6 delay-150">
-        <p class="text-neutral-400 leading-relaxed mb-6" i18n>
-          A great enthusiast of software and the Linux world, I have always cultivated curiosity and a desire to
-          experiment with new technologies, seeking out stimulating and challenging projects. With over 25 years of
-          experience in the sector, I have developed the ability to guide people and teams in the creation of
-          high-quality
-          products and services, combining strategic vision and attention to detail. Determination and tenacity are
-          distinctive traits that accompany me in achieving my goals, even in the most complex contexts.
-          Thanks to my technical studies and communication skills, which I continue to develop every day, I constantly
-          invest in my professional growth in order to always offer the best in every project I participate in.
+        <p class="text-neutral-400 leading-relaxed mb-6">
+          {{ 'ABOUT.TEXT' | translate }}
         </p>
         <div class="flex space-x-6 mt-4">
           <a href="https://github.com/filippocazzarolli" target="_blank" class="hover:text-white transition">
@@ -152,38 +143,37 @@
 
   <!-- CONTACT -->
   <section id="contact" class="max-w-7xl mx-auto px-6 lg:px-12 py-24">
-    <h2 class="text-2xl md:text-3xl font-semibold text-white mb-12 opacity-0 translate-y-6">Contact</h2>
+    <h2 class="text-2xl md:text-3xl font-semibold text-white mb-12 opacity-0 translate-y-6">{{ 'SECTIONS.CONTACT' | translate }}</h2>
     <form class="max-w-lg space-y-6 opacity-0 translate-y-6 delay-100" (submit)="openMail($event)">
       <div>
-        <label class="block text-sm text-neutral-400 mb-2" for="name" i18n>Name</label>
-        <input id="name" type="text" placeholder="Your name" i18n-placeholder="@@contactNamePlaceholder"
+        <label class="block text-sm text-neutral-400 mb-2" for="name">{{ 'CONTACT.NAME' | translate }}</label>
+        <input id="name" type="text" [placeholder]="('CONTACT.NAME_PLACEHOLDER' | translate)"
                class="w-full bg-neutral-900 border border-neutral-800 rounded-md px-4 py-3 text-sm focus:outline-none focus:border-neutral-600 transition">
       </div>
       <div>
-        <label class="block text-sm text-neutral-400 mb-2" for="email" i18n>Email</label>
-        <input id="email" type="email" placeholder="you@example.com" i18n-placeholder="@@contactEmailPlaceholder"
+        <label class="block text-sm text-neutral-400 mb-2" for="email">{{ 'CONTACT.EMAIL' | translate }}</label>
+        <input id="email" type="email" [placeholder]="('CONTACT.EMAIL_PLACEHOLDER' | translate)"
                class="w-full bg-neutral-900 border border-neutral-800 rounded-md px-4 py-3 text-sm focus:outline-none focus:border-neutral-600 transition">
       </div>
       <div>
-        <label class="block text-sm text-neutral-400 mb-2" for="message" i18n>Message</label>
-        <textarea id="message" rows="4" placeholder="Tell me about your project" i18n-placeholder="@@contactMessagePlaceholder"
+        <label class="block text-sm text-neutral-400 mb-2" for="message">{{ 'CONTACT.MESSAGE' | translate }}</label>
+        <textarea id="message" rows="4" [placeholder]="('CONTACT.MESSAGE_PLACEHOLDER' | translate)"
                   class="w-full bg-neutral-900 border border-neutral-800 rounded-md px-4 py-3 text-sm focus:outline-none focus:border-neutral-600 transition"></textarea>
       </div>
       <button type="submit"
-              class="px-6 py-3 bg-white text-neutral-900 rounded-md text-sm font-medium hover:bg-neutral-200 transition"
-              i18n>
-        Send Message
+              class="px-6 py-3 bg-white text-neutral-900 rounded-md text-sm font-medium hover:bg-neutral-200 transition">
+        {{ 'CONTACT.SEND' | translate }}
       </button>
       <!-- Fallback: direct email link if script fails; set your address in href if desired -->
-      <div class="text-xs text-neutral-500"><span i18n>Or</span>&nbsp;<a href="mailto:filippo.developer@gmail.com"
-                                                  class="underline hover:text-neutral-300" i18n>open your email
-        client</a>
+      <div class="text-xs text-neutral-500"><span>{{ 'CONTACT.OR' | translate }}</span>&nbsp;<a href="mailto:filippo.developer@gmail.com"
+                                                  class="underline hover:text-neutral-300">{{ 'CONTACT.OPEN_CLIENT' | translate }}
+      </a>
       </div>
     </form>
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-12 text-center text-xs text-neutral-600" i18n>
-    © <span>{{ currentYear }}</span> Filippo Cazzarolli. All rights reserved.
+  <footer class="py-12 text-center text-xs text-neutral-600">
+    © <span>{{ currentYear }}</span> Filippo Cazzarolli. {{ 'FOOTER.RIGHTS' | translate }}
   </footer>
 </section>

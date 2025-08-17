@@ -4,13 +4,6 @@
   "newProjectRoot": "projects",
   "projects": {
     "web-site-one": {
-      "i18n": {
-        "locales": {
-          "en-US": "src/locale/messages.xlf",
-          "it-IT": "src/locale/messages.it.xlf"
-        },
-        "sourceLocale": "en"
-      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -20,9 +13,6 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "localize": [
-              "it-IT"
-            ],
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -73,9 +63,6 @@
             }
           },
           "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular/build:extract-i18n"
         },
         "test": {
           "builder": "@angular/build:karma",

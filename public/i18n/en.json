@@ -1,0 +1,44 @@
+{
+  "NAV": {
+    "SKILLS": "Skills",
+    "ABOUT": "About",
+    "CONTACT": "Contact"
+  },
+  "HERO": {
+    "TITLE": "Full-Stack Developer crafting elegant & performant solutions",
+    "SUBTITLE": "I blend thoughtful design with robust engineering to build digital products that feel effortless.",
+    "CTA": "Get In Touch"
+  },
+  "SECTIONS": {
+    "SKILLS": "Skills",
+    "ABOUT": "About",
+    "CONTACT": "Contact"
+  },
+  "CARDS": {
+    "FRONTEND": "Frontend",
+    "BACKEND": "Backend",
+    "CLOUD": "Cloud"
+  },
+  "ABOUT": {
+    "TEXT": "A great enthusiast of software and the Linux world, I have always cultivated curiosity and a desire to experiment with new technologies, seeking out stimulating and challenging projects. With over 25 years of experience in the sector, I have developed the ability to guide people and teams in the creation of high-quality products and services, combining strategic vision and attention to detail. Determination and tenacity are distinctive traits that accompany me in achieving my goals, even in the most complex contexts. Thanks to my technical studies and communication skills, which I continue to develop every day, I constantly invest in my professional growth in order to always offer the best in every project I participate in."
+  },
+  "CONTACT": {
+    "NAME": "Name",
+    "NAME_PLACEHOLDER": "Your name",
+    "EMAIL": "Email",
+    "EMAIL_PLACEHOLDER": "you@example.com",
+    "MESSAGE": "Message",
+    "MESSAGE_PLACEHOLDER": "Tell me about your project",
+    "SEND": "Send Message",
+    "OR": "Or",
+    "OPEN_CLIENT": "open your email client"
+  },
+  "FOOTER": {
+    "RIGHTS": "All rights reserved."
+  },
+  "MAIL": {
+    "SUBJECT_BASE": "New message from portfolio site",
+    "NAME_LABEL": "Name",
+    "EMAIL_LABEL": "Email"
+  }
+}
