@@ -1,9 +1,12 @@
 import {AfterViewInit, Component, ElementRef} from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { HeroComponent } from './components/hero/hero.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @Component({
   selector: 'app-root',
-  imports: [TranslateModule],
+  imports: [TranslateModule, HeroComponent, SkillsComponent, ContactComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

@@ -1,0 +1,21 @@
+<!-- HERO -->
+<section class="relative overflow-hidden min-h-screen flex items-center justify-center pt-24">
+  <div class="pointer-events-none absolute inset-0 -z-10">
+    <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vmax] h-[120vmax] rounded-full blur-3xl opacity-10
+                  bg-[conic-gradient(from_180deg_at_50%_50%,_#6366F1_0%,_#A855F7_20%,_#EC4899_40%,_#F97316_60%,_#10B981_80%,_#6366F1_100%)]
+                  animate-[spin_40s_linear_infinite]"></div>
+  </div>
+
+  <div class="text-center max-w-2xl px-6">
+    <h1 class="text-4xl md:text-6xl font-semibold text-white mb-6 opacity-0 translate-y-6">
+      Full-Stack Developer crafting <span class="text-neutral-400">elegant &amp; performant</span> solutions
+    </h1>
+    <p class="text-neutral-400 mb-10 opacity-0 translate-y-6 delay-100">
+      {{ 'HERO.SUBTITLE' | translate }}
+    </p>
+    <div class="flex justify-center space-x-4 opacity-0 translate-y-6 delay-200">
+      <a href="#contact"
+         class="px-6 py-3 bg-white text-neutral-900 rounded-md text-sm font-medium hover:bg-neutral-200 transition">{{ 'HERO.CTA' | translate }}</a>
+    </div>
+  </div>
+</section>
