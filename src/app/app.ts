@@ -67,7 +67,10 @@ export class App implements AfterViewInit {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.remove('opacity-0', 'translate-y-6', 'delay-100', 'delay-150', 'delay-200');
+          // Reveal: keep delay classes so stagger works; only remove initial hidden/offset
+          entry.target.classList.remove('opacity-0', 'translate-y-6');
+          // Ensure final state reached
+          entry.target.classList.add('opacity-100');
           observer.unobserve(entry.target);
         }
       });
