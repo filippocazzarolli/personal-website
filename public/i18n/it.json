@@ -6,7 +6,8 @@
   },
   "HERO": {
     "TITLE": "Sviluppatore Full-Stack che crea soluzioni eleganti e performanti",
-    "SUBTITLE": "Unisco precisione progettuale e robustezza tecnica per creare esperienze digitali fluide e intuitive.",
+    "SUBTITLE_1": "Unisco precisione progettuale e robustezza tecnica",
+    "SUBTITLE_2": "per creare esperienze digitali fluide e intuitive.",
     "CTA": "Contattami"
   },
   "SECTIONS": {

@@ -6,7 +6,8 @@
   },
   "HERO": {
     "TITLE": "Full-Stack Developer crafting elegant & performant solutions",
-    "SUBTITLE": "I blend thoughtful design with robust engineering to build digital products that feel effortless.",
+    "SUBTITLE_1": "I blend thoughtful design with robust engineering",
+    "SUBTITLE_2": "to build digital products that feel effortless.",
     "CTA": "Get In Touch"
   },
   "SECTIONS": {
